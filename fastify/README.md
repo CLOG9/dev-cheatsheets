@@ -34,6 +34,31 @@ you'll get a `tsconfig.json` file in your root dir, you have to edit it:
 create a `src dir` in your root dir with an `index.ts` file.
 
 write the setup code for fastify by following the official fastify docs.
+```ts
+
+import fastify from "fastify";
+
+const server = fastify({
+  logger: false,
+});
+
+server.get("/", async (request, reply) => {
+  reply.send(request.url);
+});
+
+const PORT = parseInt(process.env.PORT ?? "") || 8080;
+
+server.listen({ port: PORT }, (err, address) => {
+  if (err) {
+    console.error(err);
+    process.exit(1);
+  }
+  console.log(`Server listening at ${address}`);
+});
+
+
+```
+
 
 now lets configure nodemon.
 create a `nodemon.json` file in your root dir and add this to it:

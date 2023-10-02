@@ -28,6 +28,8 @@ you'll get a `tsconfig.json` file in your root dir, you have to edit it:
 
 - update target to `es2017`
 - set `outDir:"./build"`
+- set `resolveJsonModule": true`
+  
 
 create a `src dir` in your root dir with an `index.ts` file.
 

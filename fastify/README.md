@@ -54,6 +54,9 @@ now in your package.json add this to your scripts:
   },
 ```
 
+i use a .gitignore extension to setup a file with node files.
+make a repo on github and set it up now.
+
 now you can start your server by running:
 
 ```bash
